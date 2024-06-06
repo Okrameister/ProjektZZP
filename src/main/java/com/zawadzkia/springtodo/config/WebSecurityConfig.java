@@ -17,7 +17,7 @@ import org.springframework.security.web.SecurityFilterChain;
 class WebSecurityConfig {
 
 
-    private static final String[] allowedAnonymousAccessURIs = {"/", "/index", "/favicon.png", "/error", "/webjars/**", "/css/**", "/images/**", "/js/**", "/auth/**"};
+    private static final String[] allowedAnonymousAccessURIs = {"/", "/index", "/favicon.png", "/error", "/webjars/**", "/css/**", "/images/**", "/js/**", "/auth/**", "/task/**"};
 
     @Bean
     @Order(4)
@@ -43,6 +43,7 @@ class WebSecurityConfig {
                 .formLogin(
                         httpSecurityFormLoginConfigurer -> {
                             httpSecurityFormLoginConfigurer
+                                    .defaultSuccessUrl("/task", true)
                                     .loginProcessingUrl("/auth/process")
                                     .loginPage("/auth/login");
                         }

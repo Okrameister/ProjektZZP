@@ -14,7 +14,7 @@ class AuthController {
     String login() {
         return "auth/login";
     }
-
+    
     @GetMapping("/error")
     String error() {
         throw new NotImplementedException("Not Implemented Yet!");
