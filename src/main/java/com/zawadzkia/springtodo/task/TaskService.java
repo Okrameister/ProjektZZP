@@ -10,6 +10,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -22,10 +23,19 @@ public class TaskService {
     private final TaskStatusRepository taskStatusRepository;
 
     public List<TaskDTO> getTaskList() {
-        UserModel user = userRepository.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName()).orElseThrow();
-        Set<TaskModel> tasks = user.getTasks();
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        UserModel user = userRepository.findByUsername(username).orElseThrow();
+
+        Set<TaskModel> tasks;
+        if (user.getAuthorities().stream().anyMatch(auth -> auth.getAuthority().equals("ROLE_ADMIN")))
+            tasks = new HashSet<>(taskRepository.findAll());
+        else
+            tasks = user.getTasks();
+
         List<TaskDTO> result = new ArrayList<>();
-        tasks.forEach(taskModel -> {
+        tasks.forEach(taskModel ->
+
+        {
             TaskStatusModel status = taskModel.getStatus();
             TaskStatusDTO taskStatusDTO = new TaskStatusDTO(status.getId(), status.getName(), status.getDisplayName());
             TaskDTO taskDTO = new TaskDTO(taskModel.getId(), taskModel.getSummary(), taskModel.getDescription(),
