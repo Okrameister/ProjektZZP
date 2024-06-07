@@ -14,9 +14,9 @@ public class IndexController {
     @GetMapping
     String index() {
         if (!SecurityContextHolder.getContext().getAuthentication().isAuthenticated()) {
-            return "index";
-        } else {
             return "redirect:/task";
+        } else {
+            return "index";
         }
     }
 
