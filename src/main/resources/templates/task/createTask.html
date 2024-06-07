@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" th:href="@{/favicon.png}">
-    <title>Edit Task</title>
+    <title>Create Task</title>
 </head>
 <style>
     body, html {
@@ -119,9 +119,9 @@
 <nav th:replace="~{base :: navbar}"></nav>
 <main>
     <div class="container">
-        <h1>Task Edition</h1>
+        <h1>Task Creation</h1>
 
-        <form th:action="@{/task/edit/{taskId}(taskId=${task.id})}" method="post" th:object="${task}">
+        <form th:action="@{/task/create}" method="post" th:object="${task}">
             <div class="form-group">
                 <label for="summary">Summary:</label>
                 <input type="text" class="form-control" id="summary" th:field="*{summary}" required>
@@ -157,7 +157,7 @@
             </div>
 
             <br>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary">Create</button>
             <a class="btn btn-secondary" th:href="@{/task}">Back</a>
         </form>
 

@@ -87,4 +87,8 @@ public class TaskService {
 
         taskRepository.save(task);
     }
+
+    public void saveTask(TaskModel task) {
+        taskRepository.save(task);
+    }
 }

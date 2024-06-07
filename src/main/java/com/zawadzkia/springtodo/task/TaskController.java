@@ -36,9 +36,18 @@ class TaskController {
         return "task/list";
     }
 
-    @GetMapping("/delete/{taskId}")
-    public String deleteTask(@PathVariable Long taskId) {
-        taskService.deleteTaskById(taskId);
+    @GetMapping("/create")
+    public ModelAndView createTask() {
+        ModelAndView model = new ModelAndView("/task/createTask");
+        model.addObject("task", new TaskModel());
+        model.addObject("categories", taskCategoryService.getUserTaskCategoryList());
+        model.addObject("statuses", taskStatusService.getUserTaskStatusList());
+        return model;
+    }
+
+    @PostMapping("/create")
+    public String saveTask(@ModelAttribute TaskModel task) {
+        taskService.saveTask(task);
         return "redirect:/task";
     }
 
@@ -58,6 +67,12 @@ class TaskController {
             @ModelAttribute TaskModel task) {
 
         taskService.editTask(taskId, task);
+        return "redirect:/task";
+    }
+
+    @GetMapping("/delete/{taskId}")
+    public String deleteTask(@PathVariable Long taskId) {
+        taskService.deleteTaskById(taskId);
         return "redirect:/task";
     }
 }
