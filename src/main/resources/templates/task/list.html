@@ -14,10 +14,10 @@
         <th scope="col">Summary</th>
         <th scope="col">Description</th>
         <th scope="col">Status</th>
-<!--        <th scope="col">Category</th>-->
-<!--        <th scope="col">Start date</th>-->
-<!--        <th scope="col">Due date</th>-->
-        <th scope="col">Delete</th>
+        <th scope="col">Category</th>
+        <th scope="col">Start date</th>
+        <th scope="col">Due date</th>
+        <th scope="col">Operation</th>
     </tr>
     </thead>
     <tbody>
@@ -25,12 +25,17 @@
         <th scope="row" th:text="${task.id}"></th>
         <td th:text="${task.summary}"></td>
         <td th:text="${task.description}"></td>
-        <td>
-            <form id="statusForm" name="statusForm" th:action="@{/task/status/{id}(id=${task.id})}" method="post" onchange="submit()">
-                <select name="status">
-                    <option th:each="status: ${statusList}" th:value="${status.name}" th:text="${status.displayName}"></option>
-                </select>
-            </form>        
+        <td th:text="${task.status.displayName}"></td>
+        <td th:text="${task.category}"></td>
+        <td th:text="${#temporals.format(task.startDate, 'yyyy-MM-dd HH:mm')}"></td>
+        <td th:text="${#temporals.format(task.dueDate, 'yyyy-MM-dd HH:mm')}"></td>
+        <td class="d-flex">
+            <form class="m-1" id="editForm" name="editForm" th:action="@{/task/editForm}" method="post" onchange="submit()">
+                <button style="background: transparent; border: none;">🖋️</button>
+            </form>
+            <form class="m-1" id="deleteForm" name="deleteForm" th:action="@{/task/delete/{taskId}(taskId=${task.id})}" method="post" onchange="submit()">
+                <button style="background: transparent; border: none;">❌</button>
+            </form>
         </td>
     </tr>
     </tbody>

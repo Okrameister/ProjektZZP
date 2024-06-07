@@ -31,8 +31,5 @@ class TaskController {
         model.addAttribute("tasks", taskList);
         model.addAttribute("statusList", userTaskStatusList);
         return "task/list";
-
     }
-
-
 }

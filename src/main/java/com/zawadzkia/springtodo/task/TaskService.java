@@ -34,12 +34,11 @@ public class TaskService {
 
         List<TaskDTO> result = new ArrayList<>();
         tasks.forEach(taskModel ->
-
         {
             TaskStatusModel status = taskModel.getStatus();
             TaskStatusDTO taskStatusDTO = new TaskStatusDTO(status.getId(), status.getName(), status.getDisplayName());
             TaskDTO taskDTO = new TaskDTO(taskModel.getId(), taskModel.getSummary(), taskModel.getDescription(),
-                    taskModel.getStartDate(), taskModel.getDueDate(), taskModel.getDescription(), taskStatusDTO);
+                    taskModel.getStartDate(), taskModel.getDueDate(), taskModel.getDescription(), taskModel.getCategory().getName(), taskStatusDTO);
             result.add(taskDTO);
         });
         return result;
@@ -50,7 +49,7 @@ public class TaskService {
         TaskStatusModel status = taskModel.getStatus();
         TaskStatusDTO taskStatusDTO = new TaskStatusDTO(status.getId(), status.getName(), status.getDisplayName());
         TaskDTO taskDTO = new TaskDTO(taskModel.getId(), taskModel.getSummary(), taskModel.getDescription(),
-                taskModel.getStartDate(), taskModel.getDueDate(), taskModel.getDescription(), taskStatusDTO);
+                taskModel.getStartDate(), taskModel.getDueDate(), taskModel.getDescription(), taskModel.getCategory().getName(), taskStatusDTO);
         return taskDTO;
     }
 
@@ -66,7 +65,7 @@ public class TaskService {
         taskModel.setDescription(taskDTO.getDescription());
         taskModel.setStartDate(taskDTO.getStartDate());
         taskModel.setDueDate(taskDTO.getDueDate());
-        taskModel.setAttachment(taskDTO.getAttachment());
+        taskModel.setAttachment(taskDTO.getCategory());
         taskModel.setStatus(taskStatusRepository.getReferenceById(taskDTO.getStatus().getId()));
         taskRepository.save(taskModel);
     }

@@ -4,49 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a344ac4-fbab-409f-9509-0e9647792278" name="Changes" comment="update security, some backend in services and front in htmls">
-      <change beforePath="$PROJECT_DIR$/target/classes/application-default.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-h2.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/SpringTodoApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/AppUserDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/AppUserDetailsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/AuthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/Authority.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/config/WebMvcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/config/WebSecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/home/IndexController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskDTO$TaskDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/category/TaskCategoryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/category/TaskCategoryModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/category/TaskCategoryRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusDTO$TaskStatusDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/user/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/user/UserModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/user/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-data-init.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-init.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-master.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/task/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/task/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/task/view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zawadzkia/springtodo/SpringTodoApplicationTests.class" beforeDir="false" />
+    <list default="true" id="222fac72-b39a-4022-84dd-24eb2b2fc57d" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zawadzkia/springtodo/task/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zawadzkia/springtodo/task/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zawadzkia/springtodo/task/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zawadzkia/springtodo/task/TaskDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zawadzkia/springtodo/task/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zawadzkia/springtodo/task/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zawadzkia/springtodo/task/category/TaskCategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zawadzkia/springtodo/task/category/TaskCategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-data-init.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-data-init.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/task/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/task/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/SpringTodoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/SpringTodoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/AppUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/AppUserDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/AppUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/AppUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/Authority.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/auth/Authority.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/config/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/config/WebMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/home/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/home/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskDTO$TaskDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskDTO$TaskDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/TaskService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/category/TaskCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/category/TaskCategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/category/TaskCategoryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/category/TaskCategoryModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusDTO$TaskStatusDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusDTO$TaskStatusDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/task/status/TaskStatusService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/user/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/user/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/user/UserModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/user/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zawadzkia/springtodo/user/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-data-init.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-data-init.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/auth/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/task/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/task/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zawadzkia/springtodo/SpringTodoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zawadzkia/springtodo/SpringTodoApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,37 +70,57 @@
     <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="2hYMOZEI1T8B4G039l2FKLse39z" />
+  <component name="ProjectId" id="2hYdpAmauAwnDWATAn7bRdYuWZH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.SpringTodoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.SpringTodoApplication.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.SpringTodoApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/mateusz/Desktop/ProjektZZP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.SpringTodoApplication">
+    <configuration name="SpringTodoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zawadzkia.springtodo.SpringTodoApplication" />
+      <module name="spring-todo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zawadzkia.springtodo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringTodoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="spring-todo" />
@@ -111,6 +129,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SpringTodoApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -123,63 +146,49 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6a344ac4-fbab-409f-9509-0e9647792278" name="Changes" comment="" />
-      <created>1717766526233</created>
+      <changelist id="222fac72-b39a-4022-84dd-24eb2b2fc57d" name="Changes" comment="" />
+      <created>1717775125457</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1717766526233</updated>
-      <workItem from="1717766528624" duration="7152000" />
-      <workItem from="1717775186797" duration="10000" />
+      <updated>1717775125457</updated>
+      <workItem from="1717775126963" duration="413000" />
+      <workItem from="1717785079308" duration="3247000" />
     </task>
-    <task id="LOCAL-00001" summary="update gitignore">
+    <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
-      <created>1717771681230</created>
+      <created>1717775242479</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1717771681230</updated>
+      <updated>1717775242479</updated>
     </task>
-    <task id="LOCAL-00002" summary="update gitignore">
+    <task id="LOCAL-00002" summary=".">
       <option name="closed" value="true" />
-      <created>1717771785358</created>
+      <created>1717775314814</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1717771785358</updated>
+      <updated>1717775314814</updated>
     </task>
-    <task id="LOCAL-00003" summary="update security, some backend in services and front in htmls">
-      <option name="closed" value="true" />
-      <created>1717774937272</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1717774937272</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update security, some backend in services and front in htmls">
-      <option name="closed" value="true" />
-      <created>1717774956476</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1717774956476</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update security, some backend in services and front in htmls">
-      <option name="closed" value="true" />
-      <created>1717775103160</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1717775103160</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update gitignore" />
-    <MESSAGE value="update security, some backend in services and front in htmls" />
-    <option name="LAST_COMMIT_MESSAGE" value="update security, some backend in services and front in htmls" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
