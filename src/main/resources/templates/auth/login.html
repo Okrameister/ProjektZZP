@@ -2,96 +2,94 @@
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org/"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head>
+<head th:replace="~{base :: html-head(~{::title})}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" th:href="@{/favicon.png}">
     <title>ToDo - Login</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <style>
-        body, html {
-            height: 100%;
-            background: linear-gradient(135deg, #71b7e6, #9b59b6);
-            color: white;
-        }
-
-        .login-form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-
-        .card {
-            background-color: rgba(255, 255, 255, 0.85);
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            width: 25rem; /* Ustaw szerokość na 25rem */
-        }
-
-        .card-body {
-            padding: 30px;
-        }
-
-        .form-control {
-            border-radius: 30px;
-            background-color: white;
-            color: black;
-        }
-
-        .btn-primary {
-            background-color: #ff5e57;
-            border: none;
-            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-            width: 100%;
-            padding: 10px 0;
-        }
-
-        .btn-primary:hover {
-            background-color: #ff2e1f;
-            transform: scale(1.1);
-        }
-
-        label, h2 {
-            color: black;
-        }
-
-        .btn-primary:focus {
-            box-shadow: none;
-        }
-
-        .card-body h2 {
-            animation: fadeInDown 1s ease-in-out;
-        }
-
-        .card-body .form-control, .card-body .btn {
-            animation: fadeInUp 1s ease-in-out;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
 </head>
+<style>
+    body, html {
+        height: 100%;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        color: white;
+    }
+
+    .login-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        width: 25rem; /* Ustaw szerokość na 25rem */
+    }
+
+    .card-body {
+        padding: 30px;
+    }
+
+    .form-control {
+        border-radius: 30px;
+        background-color: white;
+        color: black;
+    }
+
+    .btn-primary {
+        background-color: #ff5e57;
+        border: none;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .btn-primary:hover {
+        background-color: #ff2e1f;
+        transform: scale(1.1);
+    }
+
+    label, h2 {
+        color: black;
+    }
+
+    .btn-primary:focus {
+        box-shadow: none;
+    }
+
+    .card-body h2 {
+        animation: fadeInDown 1s ease-in-out;
+    }
+
+    .card-body .form-control, .card-body .btn {
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
 <body>
 
 <div class="login-form">
@@ -127,8 +125,5 @@
     </fieldset>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

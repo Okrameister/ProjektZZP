@@ -30,6 +30,13 @@ public class TaskCategoryModel {
     @JoinColumn(name = "owner_id")
     private UserModel owner;
 
+    public TaskCategoryModel(Long id, String name, String description, UserModel owner) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.owner = owner;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

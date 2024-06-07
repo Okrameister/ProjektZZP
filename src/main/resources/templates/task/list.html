@@ -30,17 +30,22 @@
         <td th:text="${#temporals.format(task.startDate, 'yyyy-MM-dd HH:mm')}"></td>
         <td th:text="${#temporals.format(task.dueDate, 'yyyy-MM-dd HH:mm')}"></td>
         <td class="d-flex">
-            <form class="m-1" id="editForm" name="editForm" th:action="@{/task/editForm}" method="post" onchange="submit()">
+            <form class="m-1" id="editForm" name="editForm" th:action="@{/task/edit/{taskId}(taskId=${task.id})}"
+                  method="get" onchange="submit()">
                 <button style="background: transparent; border: none;">🖋️</button>
             </form>
-            <form class="m-1" id="deleteForm" name="deleteForm" th:action="@{/task/delete/{taskId}(taskId=${task.id})}" method="post" onchange="submit()">
+            <form class="m-1" id="deleteForm" name="deleteForm" th:action="@{/task/delete/{taskId}(taskId=${task.id})}"
+                  method="get" onchange="submit()">
                 <button style="background: transparent; border: none;">❌</button>
             </form>
         </td>
     </tr>
+
+    <tr th:if="${tasks.isEmpty()}">
+        <td colspan="8" class="text-center">Your to-do list is empty!</td>
+    </tr>
     </tbody>
 </table>
-
 
 </body>
 </html>

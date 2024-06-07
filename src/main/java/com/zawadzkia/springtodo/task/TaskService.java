@@ -70,4 +70,21 @@ public class TaskService {
         taskRepository.save(taskModel);
     }
 
+    public void deleteTaskById(Long taskId) {
+        taskRepository.deleteById(taskId);
+    }
+
+    public void editTask(Long taskId, TaskModel updatedTask) {
+        TaskModel task = taskRepository.findById(taskId)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid task ID: " + taskId));
+
+        task.setSummary(updatedTask.getSummary());
+        task.setDescription(updatedTask.getDescription());
+        task.setCategory(updatedTask.getCategory());
+        task.setStatus(updatedTask.getStatus());
+        task.setStartDate(updatedTask.getStartDate());
+        task.setDueDate(updatedTask.getDueDate());
+
+        taskRepository.save(task);
+    }
 }
