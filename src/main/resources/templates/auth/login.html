@@ -26,7 +26,7 @@
         background-color: rgba(255, 255, 255, 0.85);
         border-radius: 15px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        width: 25rem; /* Ustaw szerokość na 25rem */
+        width: 25rem;
     }
 
     .card-body {
@@ -61,17 +61,21 @@
     }
 
     .card-body h2 {
-        animation: fadeInDown 1s ease-in-out;
+        animation: slideInDown .7s ease-in-out;
     }
 
-    .card-body .form-control, .card-body .btn {
-        animation: fadeInUp 1s ease-in-out;
+    .card-body .form-control, .card-body label {
+        animation: slideInLeft .7s ease-in-out;
     }
 
-    @keyframes fadeInDown {
+    .card-body .btn {
+        animation: slideInUp .7s ease-in-out;
+    }
+
+    @keyframes slideInDown {
         from {
             opacity: 0;
-            transform: translateY(-20px);
+            transform: translateY(-50px);
         }
         to {
             opacity: 1;
@@ -79,10 +83,21 @@
         }
     }
 
-    @keyframes fadeInUp {
+    @keyframes slideInLeft {
         from {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
         }
         to {
             opacity: 1;
