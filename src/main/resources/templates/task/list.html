@@ -74,7 +74,7 @@
         transition: transform 0.3s ease-in-out;
     }
 
-    button:hover {
+    .button:hover {
         transform: scale(1.2);
     }
 
@@ -144,11 +144,11 @@
                 <td class="d-flex">
                     <form class="m-1" id="editForm" name="editForm" th:action="@{/task/edit/{taskId}(taskId=${task.id})}"
                           method="get" onchange="submit()">
-                        <button style="background: transparent; border: none;">🖋️</button>
+                        <button class="button" style="background: transparent; border: none;">🖋️</button>
                     </form>
                     <form class="m-1" id="deleteForm" name="deleteForm" th:action="@{/task/delete/{taskId}(taskId=${task.id})}"
                           method="get" onchange="submit()">
-                        <button style="background: transparent; border: none;">❌</button>
+                        <button class="button" style="background: transparent; border: none;">❌</button>
                     </form>
                 </td>
             </tr>
