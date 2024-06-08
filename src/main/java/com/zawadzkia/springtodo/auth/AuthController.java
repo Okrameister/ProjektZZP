@@ -6,11 +6,21 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.zawadzkia.springtodo.user.UserModel;
+import com.zawadzkia.springtodo.user.UserService;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
 @Controller
-@RequestMapping(path = "/auth")
+@RequestMapping({"/auth"})
 class AuthController {
+    private final UserService userService;
 
     @GetMapping("/login")
     String login() {
@@ -19,6 +29,19 @@ class AuthController {
             return "redirect:/task";
         }
         return "auth/login";
+    }
+
+    @GetMapping("/register")
+    public ModelAndView createUser() {
+        ModelAndView model = new ModelAndView("/auth/register");
+        model.addObject("user", new UserModel());
+        return model;
+    }
+
+    @PostMapping("/register")
+    public String saveUser(@ModelAttribute UserModel user) {
+        userService.saveUser(user);
+        return "redirect:/task";
     }
     
     @GetMapping("/error")

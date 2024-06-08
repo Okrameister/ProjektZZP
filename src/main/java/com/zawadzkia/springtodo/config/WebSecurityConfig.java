@@ -15,7 +15,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 class WebSecurityConfig {
-    private static final String[] allowedAnonymousAccessURIs = {"/", "/index", "/favicon.png", "/error", "/webjars/**", "/css/**", "/images/**", "/js/**", "/auth/login"};
+    private static final String[] allowedAnonymousAccessURIs = {"/", "/index", "/favicon.png", "/error", "/webjars/**", "/css/**", "/images/**", "/js/**", "/auth/login", "/auth/register"};
 
     @Bean
     @Order(4)

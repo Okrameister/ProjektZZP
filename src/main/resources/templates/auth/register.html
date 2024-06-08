@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http://www.thymeleaf.org/"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+      xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="~{base :: html-head(~{::title})}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" th:href="@{/favicon.png}">
-    <title>ToDo - Login</title>
+    <title>Create User</title>
 </head>
 <style>
     body, html {
@@ -106,38 +105,34 @@
     }
 </style>
 <body>
-
+    
 <div class="login-form">
     <fieldset th:fragment="login-form" class="card container mt-3" sec:authorize="isAnonymous()">
-        <form method="post" th:action="@{/auth/process}">
-            <div class="card-body g-3 align-items-center">
-                <div class="text-center mb-4">
-                    <h2 class="font-weight-bold">Log In</h2>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-sm-3">
-                        <label for="username" class="col-form-label">Username</label>
+        <form method="post" th:action="@{/auth/register}">
+            <form th:action="@{/auth/register}" method="post" th:object="${user}">
+                <div class="card-body g-3 align-items-center">
+                    <div class="text-center mb-4">
+                        <h2 class="font-weight-bold">Register</h2>
                     </div>
-                    <div class="col-sm-9">
-                        <input type="text" id="username" name="username" class="form-control" required>
+                    <div class="form-group">
+                        <label for="username">Login:</label>
+                        <input type="text" class="form-control" id="username" th:field="*{username}" required>
+                    </div><br>
+        
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input class="form-control content-field" id="password" th:field="*{password}" required>
                     </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-sm-3">
-                        <label for="password" class="col-form-label">Password</label>
-                    </div>
-                    <div class="col-sm-9">
-                        <input type="password" id="password" name="password" class="form-control" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <button class="btn btn-primary" type="submit">Log In</button>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <button class="btn btn-primary" type="submit">Register</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
+            <a style="margin-inline: auto; margin-block: 10px" th:href="@{/auth/login}">Login</a>
         </form>
-        <span style="margin-inline: auto; margin-block: 10px">Don't have account? <a th:href="@{/auth/register}">Register</a></span>
     </fieldset>
 </div>
 
