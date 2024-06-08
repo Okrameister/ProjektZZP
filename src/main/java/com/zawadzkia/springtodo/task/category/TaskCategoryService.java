@@ -1,6 +1,10 @@
 package com.zawadzkia.springtodo.task.category;
 
 import com.zawadzkia.springtodo.auth.AppUserDetails;
+import com.zawadzkia.springtodo.task.TaskModel;
+import com.zawadzkia.springtodo.user.UserModel;
+import com.zawadzkia.springtodo.user.UserRepository;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -14,6 +18,8 @@ public class TaskCategoryService {
 
     private final TaskCategoryRepository taskCategoryRepository;
 
+    private final UserRepository userRepository;
+
     public List<TaskCategoryModel> getUserTaskCategoryList() {
         ArrayList<TaskCategoryModel> result = new ArrayList<>();
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -25,4 +31,13 @@ public class TaskCategoryService {
         return result;
     }
 
+    public void saveCategory(TaskCategoryModel category) {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        UserModel user = userRepository.findByUsername(username).orElseThrow();
+
+
+        category.setOwner(user);
+        
+        taskCategoryRepository.save(category);
+    }
 }

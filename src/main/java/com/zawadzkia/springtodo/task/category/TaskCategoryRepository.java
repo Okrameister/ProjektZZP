@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface TaskCategoryRepository extends JpaRepository<TaskCategoryModel, Long>{
     List<TaskCategoryModel> findAllByOwner(UserModel owner);
+
+    List<TaskCategoryModel> findAll();
 }
