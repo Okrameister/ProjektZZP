@@ -40,8 +40,13 @@ class AuthController {
 
     @PostMapping("/register")
     public String saveUser(@ModelAttribute UserModel user) {
-        userService.saveUser(user);
-        return "redirect:/task";
+        UserModel userModel = userService.existingUser(user.getUsername());
+        if (userModel == null) {
+            userService.saveUser(user);
+            return "redirect:/task";
+        } else {
+            return "redirect:/auth/register";
+        }
     }
     
     @GetMapping("/error")

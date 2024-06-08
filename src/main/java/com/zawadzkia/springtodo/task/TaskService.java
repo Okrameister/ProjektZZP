@@ -91,9 +91,7 @@ public class TaskService {
     public void saveTask(TaskModel task) {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
         UserModel user = userRepository.findByUsername(username).orElseThrow();
-
         task.setOwner(user);
-        
         taskRepository.save(task);
     }
 }
