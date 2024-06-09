@@ -1,6 +1,8 @@
 package com.zawadzkia.springtodo.task.status;
 
 import com.zawadzkia.springtodo.auth.AppUserDetails;
+import com.zawadzkia.springtodo.user.UserModel;
+import com.zawadzkia.springtodo.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,7 @@ import java.util.List;
 public class TaskStatusService {
 
     private final TaskStatusRepository taskStatusRepository;
+    private final UserRepository userRepository;
 
     public List<TaskStatusDTO> getUserTaskStatusList() {
         ArrayList<TaskStatusDTO> result = new ArrayList<>();
@@ -24,5 +27,30 @@ public class TaskStatusService {
         }
         return result;
     }
+    public TaskStatusModel getStatusModelById(Long id) {
+        TaskStatusModel StatusModel = taskStatusRepository.getReferenceById(id);
+        return StatusModel;
+    }
 
+    public void saveStatus(TaskStatusModel Status) {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        UserModel user = userRepository.findByUsername(username).orElseThrow();
+        Status.setOwner(user);
+        taskStatusRepository.save(Status);
+    }
+
+    public void editStatus(Long StatusId, TaskStatusModel updatedTaskStatus) {
+        TaskStatusModel Status = taskStatusRepository.findById(StatusId)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid task ID: " + StatusId));
+        Status.setName(updatedTaskStatus.getName());
+        taskStatusRepository.save(Status);
+    }
+
+    public void deleteStatusById(Long StatusId) {
+        try {
+            taskStatusRepository.deleteById(StatusId);
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+    }
 }
