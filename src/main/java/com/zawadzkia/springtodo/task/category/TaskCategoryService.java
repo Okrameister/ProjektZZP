@@ -17,12 +17,23 @@ public class TaskCategoryService {
     private final UserRepository userRepository;
 
     public List<TaskCategoryModel> getUserTaskCategoryList() {
-        ArrayList<TaskCategoryModel> result = new ArrayList<>();
+        List<TaskCategoryModel> result = new ArrayList<>();
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+    
         if (principal instanceof AppUserDetails userDetails) {
-            List<TaskCategoryModel> allByOwner = taskCategoryRepository.findAllByOwner(userDetails.getUser());
-            allByOwner.forEach(category -> result.add(new TaskCategoryModel(category.getId(), category.getName(),
-                    category.getDescription(), category.getOwner())));
+            UserModel user = userDetails.getUser();
+            List<TaskCategoryModel> categories;
+    
+            if (user.getAuthorities().stream().anyMatch(auth -> auth.getAuthority().equals("ROLE_ADMIN"))) {
+                categories = taskCategoryRepository.findAll();
+            } else {
+                categories = taskCategoryRepository.findAllByOwner(user);
+            }
+    
+            categories.forEach(category -> 
+                result.add(new TaskCategoryModel(category.getId(), category.getName(), 
+                        category.getDescription(), category.getOwner()))
+            );
         }
         return result;
     }
