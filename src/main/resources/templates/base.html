@@ -15,7 +15,7 @@
     <title th:replace="${title}"></title>
 </head>
 <body>
-<nav th:fragment="navbar" class="navbar navbar-expand-lg bg-body-tertiary" sec:authorize="isAuthenticated()">
+<nav th:fragment="navbar" class="navbar navbar-expand-lg bg-body-tertiary" sec:authorize="isAuthenticated()" style="position: sticky; top: 0">
     <div class="container-fluid">
         <a class="navbar-brand" th:href="@{/task}">To Do</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -25,7 +25,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" th:href="@{/category}">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Statuses</a>
                 </li>
 <!--                <li class="nav-item">-->
 <!--                    <a class="nav-link" href="#">Link</a>-->
