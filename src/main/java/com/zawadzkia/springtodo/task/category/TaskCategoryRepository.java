@@ -10,6 +10,4 @@ public interface TaskCategoryRepository extends JpaRepository<TaskCategoryModel,
     List<TaskCategoryModel> findAllByOwner(UserModel owner);
 
     List<TaskCategoryModel> findAll();
-
-    
 }

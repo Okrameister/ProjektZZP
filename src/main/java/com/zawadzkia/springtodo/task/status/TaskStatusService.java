@@ -1,6 +1,7 @@
 package com.zawadzkia.springtodo.task.status;
 
 import com.zawadzkia.springtodo.auth.AppUserDetails;
+import com.zawadzkia.springtodo.task.category.TaskCategoryModel;
 import com.zawadzkia.springtodo.user.UserModel;
 import com.zawadzkia.springtodo.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,13 +19,22 @@ public class TaskStatusService {
     private final UserRepository userRepository;
 
     public List<TaskStatusDTO> getUserTaskStatusList() {
-        ArrayList<TaskStatusDTO> result = new ArrayList<>();
+        List<TaskStatusDTO> result = new ArrayList<>();
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        if(principal instanceof AppUserDetails userDetails) {
-            List<TaskStatusModel> allByOwner = taskStatusRepository.findAllByOwner(userDetails.getUser());
+        if (principal instanceof AppUserDetails userDetails) {
+            UserModel user = userDetails.getUser();
+            List<TaskStatusModel> allByOwner;
+    
+            if (user.getAuthorities().stream().anyMatch(auth -> auth.getAuthority().equals("ROLE_ADMIN"))) {
+                allByOwner = taskStatusRepository.findAll();
+            } else {
+                allByOwner = taskStatusRepository.findAllByOwner(user);
+            }
+    
             allByOwner.forEach(status -> result.add(new TaskStatusDTO(status.getId(), status.getName(),
-                    status.getDisplayName())));
+                status.getDisplayName())));
         }
+    
         return result;
     }
     public TaskStatusModel getStatusModelById(Long id) {
