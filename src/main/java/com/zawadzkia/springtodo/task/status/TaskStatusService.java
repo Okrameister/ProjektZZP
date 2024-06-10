@@ -1,7 +1,6 @@
 package com.zawadzkia.springtodo.task.status;
 
 import com.zawadzkia.springtodo.auth.AppUserDetails;
-import com.zawadzkia.springtodo.task.category.TaskCategoryModel;
 import com.zawadzkia.springtodo.user.UserModel;
 import com.zawadzkia.springtodo.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +20,7 @@ public class TaskStatusService {
     public List<TaskStatusDTO> getUserTaskStatusList() {
         List<TaskStatusDTO> result = new ArrayList<>();
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
         if (principal instanceof AppUserDetails userDetails) {
             UserModel user = userDetails.getUser();
             List<TaskStatusModel> allByOwner;
@@ -30,9 +30,9 @@ public class TaskStatusService {
             } else {
                 allByOwner = taskStatusRepository.findAllByOwner(user);
             }
-    
+
             allByOwner.forEach(status -> result.add(new TaskStatusDTO(status.getId(), status.getName(),
-                status.getDisplayName())));
+                    status.getDisplayName())));
         }
     
         return result;

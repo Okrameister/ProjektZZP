@@ -1,6 +1,5 @@
 package com.zawadzkia.springtodo.task.status;
 
-import com.zawadzkia.springtodo.task.TaskService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
