@@ -137,7 +137,7 @@
                 <th scope="row" th:text="${task.id}"></th>
                 <td th:text="${task.summary}"></td>
                 <td th:text="${task.description}"></td>
-                <td th:text="${task.status.displayName}"></td>
+                <td th:text="${task.status.name}"></td>
                 <td th:text="${task.category}"></td>
                 <td th:text="${#temporals.format(task.startDate, 'yyyy-MM-dd HH:mm')}"></td>
                 <td th:text="${#temporals.format(task.dueDate, 'yyyy-MM-dd HH:mm')}"></td>
